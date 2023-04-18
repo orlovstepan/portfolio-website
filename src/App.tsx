@@ -1,17 +1,10 @@
 import Header from './Components/Header/Header'
-import Home from './Pages/Home'
 import { Route, Routes } from 'react-router-dom'
-import Projects from './Pages/Projects'
-import Profile from './Pages/Profile'
-import { useState } from 'react'
+import { createContext, useState } from 'react'
+import { routes } from './utils/routes'
 
+export const ThemeContext = createContext<string | null>(null);
 
-const routes = [
-  {
-    path: '/',
-    component: <Home/>
-  },
-]
 
 function App() {
 
@@ -25,9 +18,7 @@ function App() {
     <div className="App">
       <Header darkTheme={darkTheme} toggleDarkTheme={toggleDarkTheme} />
       <Routes>
-        <Route path='/' element={<Home/>}></Route>
-        <Route path='/profile' element={<Profile/>}></Route>
-        <Route path='/projects' element={<Projects/>}></Route>
+        {routes.map((route, index)=><Route key={index} path={route.path} element={<route.element/>} /> )}
       </Routes>
     </div>
   )
