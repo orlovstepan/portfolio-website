@@ -1,0 +1,97 @@
+:root {
+    /* default CSS variables */
+    // --font-color: #333;
+    // --background-color: #eee;
+    // --link-color: cornflowerblue;
+  }
+  
+  [data-theme="dark"] {
+    /* dark mode CSS variables */
+    --font-color: #eee;
+    --background-color: #37273c;
+    --link-color: lightblue;
+  }
+  
+  body {
+    /* body styles */
+    background-color: var(--background-color);
+    color: var(--font-color);
+  }
+  
+  a {
+    /* link styles */
+    color: var(--link-color);
+  }
+  
+  /* Custom Dark Mode Toggle Element */
+  
+  .toggle-theme-wrapper {
+    /* wrapper styles */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .toggle-theme-wrapper span {
+    /* icon styles */
+    font-size: 19.6px;
+    margin: 0 2.8px;
+  }
+  
+  .toggle-theme {
+    /* input container styles */
+    position: relative;
+    display: inline-block;
+    height: 23.8px;
+    width: 42px;
+  }
+  
+  .toggle-theme input {
+    /* input styles */
+    display: none;
+  }
+  
+  .slider {
+    /* slider styles */
+    background-color: #aaa;
+    position: absolute;
+    cursor: pointer;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    transition: 0.2s;
+  }
+  
+  .slider:before {
+    /* slider knob styles */
+    background-color: #fff;
+    bottom: 1.5px;
+    content: "";
+    height: 20.8px;
+    left: 1px;
+    position: absolute;
+    transition: 0.4s;
+    width: 20.8px;
+  }
+  
+  input:checked + .slider:before {
+    /* checked slider knob styles */
+    transform: translateX(19px);
+  }
+  
+  input:checked + .slider {
+    /* checked slider styles */
+    background-color: cornflowerblue;
+  }
+  
+  .slider.round {
+    /* rounded slider styles */
+    border-radius: 28.6px;
+  }
+  
+  .slider.round:before {
+    /* rounded slider knob styles */
+    border-radius: 50%;
+  }
+  
