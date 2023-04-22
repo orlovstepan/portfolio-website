@@ -1,30 +1,3 @@
-:root {
-    /* default CSS variables */
-    // --font-color: #333;
-    // --background-color: #eee;
-    // --link-color: cornflowerblue;
-  }
-  
-  [data-theme="dark"] {
-    /* dark mode CSS variables */
-    --font-color: #eee;
-    --background-color: #37273c;
-    --link-color: lightblue;
-  }
-  
-  body {
-    /* body styles */
-    background-color: var(--background-color);
-    color: var(--font-color);
-  }
-  
-  a {
-    /* link styles */
-    color: var(--link-color);
-  }
-  
-  /* Custom Dark Mode Toggle Element */
-  
   .toggle-theme-wrapper {
     /* wrapper styles */
     display: flex;

@@ -1,0 +1,17 @@
+.profile-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.profile-avatar{
+    width: 10vw;
+    margin-bottom: 5%;
+}
+
+.profile-experience{
+    display: flex;
+    flex-direction: column;
+}

@@ -7,7 +7,7 @@
     top:0;
     left:0;
     border-radius: 50%;
-    background: rgb(133, 174, 255);
+    background: var(--circle-background);
     animation: ripple 15s infinite;
     box-shadow: 0px 0px 1px 0px #b7d5ea;
     z-index: 0;
